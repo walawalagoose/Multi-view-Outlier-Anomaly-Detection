@@ -260,3 +260,193 @@ TO BE DONE
 
 # Datasets
 
+1. 20newsgroup
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+   - Being used in: MUVAD(spilitted into newsm&newsng); MODGD
+   - Link: [[20newsgroup-homepage]](https://lig-membres.imag.fr/grimal/data.html); [[20newsgroup-datapage]](http://qwone.com/~jason/20Newsgroups/)
+
+2. AWA2 (AWA-10)
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+   - Being used in: SRLSP; IAMOD
+   - Link: [[AWA2]](https://cvml.ista.ac.at/AwA2/)
+
+3. BUAA VisNir (BUAA NIR-VIS)
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+   - Being used in: DMOD; CRMOD; LDSR
+   - Link: [[BUAA VisNir]](https://blog.csdn.net/weixin_42078490/article/details/123065435)
+
+4. Caltech 101
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+   - Being used in: SRLSP(Caltech-7); IAMOD(Caltech-7); MODGD
+   - Link: [[Caltech 101-homepage]](http://www.vision.caltech.edu/datasets/); [[Caltech 101-datapage]](https://data.caltech.edu/records/mzrjq-6wc02)
+
+5. COIL20
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+   - Being used in: MODGD
+   - Link: [[COIL20]](https://kaggle.com/datasets/yupanliu999/coil20-3v)
+
+6. DBLP
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+   - Being used in: HOAD
+   - Link: [[DBLP-original]](https://dblp.uni-trier.de/); [[DBLP-kaggle]](https://www.kaggle.com/search?q=DBLP+in%3Adatasets)
+
+7. KDD-Cup 1999
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+   - Being used in: CRMOD
+   - Link: [[KDD-Cup 1999-original]](https://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html); [[KDD-Cup 1999-kaggle]](https://www.kaggle.com/datasets/galaxyh/kdd-cup-1999-data/data)
+
+8. LandUse-21
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+   - Being used in: MODGD
+   - Link: [[LandUse-21-original]](http://weegee.vision.ucmerced.edu/datasets/landuse.html); [[LandUse-21-availablenow]](https://www.kaggle.com/datasets/apollo2506/landuse-scene-classification?select=images)
+
+9. MNIST & USPS
+
+   - Description: 
+   - Features: Multi-view (); With anomaly ()
+
+   1. MNIST
+      - Description: 
+      - Being used in: NCMOD
+      - Link: [[MNIST]](https://www.kaggle.com/datasets/oddrationale/mnist-in-csv)
+   2. USPS
+      - Description: 
+      - Being used in: 
+      - Link: [[USPS]](https://www.kaggle.com/datasets/bistaumanga/usps-dataset)
+   3. USPS-MNIST
+      - Description: 
+      - Being used in: CL; MLRA
+
+10. MovieLens-1M
+
+    - Description: 
+    - Features: Multi-view (); With anomaly ()
+    - Being used in: HOAD (unknown for specific subdataset); MLRA
+    - Link: [[MovieLens-1M]](https://grouplens.org/datasets/movielens/1m/)
+
+11. MSRC-v1
+
+    - Description: 
+    - Features: Multi-view (); With anomaly ()
+    - Being used in: SRLSP; IAMOD
+    - Link: [[MSRC-v1]](https://www.microsoft.com/en-us/research/project/image-understanding/downloads/)
+
+12. Oxford Flowers
+
+    - Description: 
+    - Features: Multi-view (); With anomaly ()
+
+    1. Oxford 17 Flowers
+       - Description: 
+       - Being used in: CL
+       - Link: [[Oxford 17 Flowers]](https://www.kaggle.com/datasets/datajameson/oxford-17-flowers-dataset)
+    2. Oxford 102 Flowers
+       - Description: 
+       - Being used in:
+       - Link: [[Oxford 102 Flowers]](https://www.kaggle.com/datasets/yousefmohamed20/oxford-102-flower-dataset)
+
+13. REUTERS
+
+    - Description: 
+    - Features: Multi-view (); With anomaly ()
+    - Being used in: NCMOD
+    - Link: [[REUTERS-original]](https://lig-membres.imag.fr/grimal/data.html); [[REUTERS-kaggle]](https://www.kaggle.com/datasets/nltkdata/reuters)
+
+14. Titanic
+
+    - Description: 
+    - Features: Multi-view (); With anomaly ()
+    - Being used in: NCMOD
+    - Link: [[Titanic]](https://www.kaggle.com/competitions/titanic/data)
+
+15. UCI Machine Learning Repository
+
+    - Description: 
+    - Features: Multi-view (); With anomaly ()
+    - Link: [[UCI Machine Learning Repository]](https://archive.ics.uci.edu/dataset)
+
+    1. credit
+       - Description: 
+       - Being used in: CRMOD
+       - Link: [[UCI-credit-original]](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients); [[UCI-credit-availablenow]](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
+    2. digit (Handwritten/Multiple Features)
+       - Description: 
+       - Being used in: MODGD
+       - Link: [[UCI-digit-original]](https://archive.ics.uci.edu/ml/datasets/Multiple+Features)
+    3. ionospere
+       - Description: 
+       - Being used in: DMOD; CRMOD; MLRA; MUVAD; SRLSP; IAMOD
+       - Link: [[UCI-ionospere-original]](https://archive.ics.uci.edu/dataset/52/ionosphere); [[UCI-ionospere-availablenow]](https://www.kaggle.com/datasets/prashant111/ionosphere)
+    4. iris
+       - Description: 
+       - Being used in: AP; DMOD; CRMOD; MLRA; SRLSP; IAMOD
+       - Link: [[UCI-iris-original]](https://archive.ics.uci.edu/dataset/53/iris); [[UCI-iris-availablenow]](https://www.kaggle.com/datasets/uciml/iris)
+    5. leaf
+       - Description: 
+       - Being used in: SRLSP
+       - Link: [[UCI-leaf-original]](https://archive.ics.uci.edu/dataset/288/leaf)
+    6. letter
+       - Description: 
+       - Being used in: AP; DMOD; CRMOD; MLRA; LDSR; MODDIS; SRLSP; IAMOD
+       - Link: [[UCI-letter-original]](https://archive.ics.uci.edu/dataset/59/letter+recognition)
+    7. pima
+       - Description: 
+       - Being used in: MLRA; LDSR; MODDIS; SRLSP; IAMOD
+       - Link: [UCI-pima-original]; [[UCI-pima-availablenow]](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
+    8. vowel
+       - Description: 
+       - Being used in: MUVAD
+       - Link: [[UCI-vowel-original]](https://archive.ics.uci.edu/dataset/152/connectionist+bench+vowel+recognition+deterding+data)
+    9. waveform
+       - Description: 
+       - Being used in: AP; MLRA (v1)
+       - Link: [[UCI-waveform-original-v1];](https://archive.ics.uci.edu/dataset/107/waveform+database+generator+version+1
+         ) [[UCI-waveform-original-v2]](https://archive.ics.uci.edu/dataset/108/waveform+database+generator+version+2)
+    10. wdbc (Breast Cancer Wisconsin Diagnostic)
+        - Description: 
+        - Being used in: MLRA; LDSR; MODDIS
+        - Link: [[UCI-wdbc-original]](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic); [[UCI-wdbc-availablenow]](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)
+    11. wine
+        - Description: 
+        - Being used in: LDSR; MODDIS
+        - Link: [[UCI-wine-original]](https://archive.ics.uci.edu/dataset/109/wine); [[UCI-wine-availablenow]](https://www.kaggle.com/datasets/tawfikelmetwally/wine-dataset)
+    12. wobc (breast/Breast Cancer Wisconsin Original)
+        - Description: 
+        - Being used in: DMOD; CRMOD
+        - Link: [[UCI-breast-original]](https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original); [[UCI-breast-availablenow]](https://www.kaggle.com/datasets/marshuu/breast-cancer)
+    13. zoo
+        - Description: 
+        - Being used in: AP; MLRA; LDSR; MODDIS; MUVAD; SRLSP; IAMOD
+        - Link: [[UCI-zoo-original]](https://archive.ics.uci.edu/dataset/111/zoo); [[UCI-zoo-availablenow]](https://www.kaggle.com/datasets/uciml/zoo-animal-classification)
+
+16. WebKB
+
+    - Description: 
+    - Features: Multi-view (); With anomaly ()
+    - Being used in: MLRA (Wisconsin)
+    - Link: [[WebKB]](https://lig-membres.imag.fr/grimal/data.html)
+
+17. YaleB
+
+    - Description: 
+    - Features: Multi-view (); With anomaly ()
+    - Being used in: MODGD
+    - Link: [[YaleB-original]](http://vision.ucsd.edu/~leekc/ExtYaleDatabase/ExtYaleB.html) (already unavailable); [[YaleB-availablenow]](https://www.kaggle.com/datasets/tbourton/extyalebcroppedpng)
+
+18. TODO...
