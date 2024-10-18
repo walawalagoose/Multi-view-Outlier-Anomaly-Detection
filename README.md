@@ -29,61 +29,97 @@ Any positive contribution to issues/pull requests is welcomed!
 1. **HOAD**
    - From: "A Spectral Framework for Detecting Inconsistency across Multi-Source Object Relationships", ICDM 2011 (CCF-B)
    - Description: 
-   - Keywords/ Contributions: 
-   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/6137313), [Code]
+     - 核心思想：在每个视图数据上建立图并构建邻接矩阵，并为所有视图构建了一个带有约束的组合谱聚类（连接所有图）
+     - 异常度量：样本在所有视图谱嵌入的两两余弦距离之和
+     - 限制：依赖成对计算；基于聚类；处理一种异常值
+   - Keywords/ Contributions: 谱聚类；图表示
+   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/6137313), [Code] (Not-Found yet)
 2. **AP**
    - From: "Clustering-Based Anomaly Detection in Multi-View Data", CIKM 2013 (CCF-B)
    - Description: 
-   - Keywords/ Contributions: 
-   - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/2505515.2507840), [Code]
+     - 核心思想：在每个视图数据上执行亲和传播聚类，基于亲和传播矩阵构造亲和性向量（数据点和其他点聚类中心与该点亲和度之和，which可由距离或核函数表示）
+     - 异常度量：样本在所有视图亲和性向量的两两相似性（距离、相似性 or HSIC)之和
+     - 限制/优点：依赖成对计算；基于聚类；处理一种异常值
+   - Keywords/ Contributions: 亲和传播聚类
+   - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/2505515.2507840), [Code] (Not-Found yet)
 3. **DMOD**
    - From: "Dual-Regularized Multi-View Outlier Detection", IJCAI 2015 (CCF-A)
    - Description: 
-   - Keywords/ Contributions: 
+     - 核心思想：进行K-Means聚类后将数据分解为聚类中心矩阵、聚类指示矩阵和残差矩阵，并构造对每个视图残差矩阵稀疏性和聚类结构的成对约束
+     - 异常度量：样本在所有视图内聚类指示矩阵的成对内积（类异常）与残差矩阵内积（属性异常）之差
+     - 限制/优点：依赖成对计算；基于聚类；处理两种异常值
+   - Keywords/ Contributions: K-Means聚类；稀疏表示；凸优化
    - Link: [[Paper]](https://www.ijcai.org/Abstract/15/572), [[Code]](https://github.com/nilde/GABD/blob/aaf0101361dece3f720e3f4f3f0e0c9caa4246ad/mongoDBScripts/codiOriol/src/OutlierDetector/DMOD.py)
 4. **CRMOD**
    - From: "Consensus Regularized Multi-View Outlier Detection", TIP 2018 (CCF-A, JCR Q1)
-   - Description: 
-   - Keywords/ Contributions: 
+   - Description: DOMD的优化版
+     - 核心思想：进行K-Means聚类后将数据分解为共识聚类中心矩阵、聚类指示矩阵和残差矩阵，并构造对每个视图残差矩阵稀疏性和聚类结构的共识约束
+     - 异常度量：同DMOD，仍为pair-wise
+     - 限制/优点：依赖成对计算；基于聚类；处理两种异常值
+   - Keywords/ Contributions: K-Means聚类；稀疏表示；凸优化
    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/8047342), [[Code]](https://github.com/nilde/GABD/blob/aaf0101361dece3f720e3f4f3f0e0c9caa4246ad/mongoDBScripts/codiOriol/src/OutlierDetector/CMOD.py)
 5. **MLRA**
    - From: "Multi-View Low-Rank Analysis with Applications to Outlier Detection", TKDD 2018 (CCF-B, JCR Q1)
-   - Description: 
-   - Keywords/ Contributions: 
+   - Description: SIAM 2015版本的优化
+     - 核心思想：将每个视图数据分解为低秩自表示项与稀疏残差矩阵之和，并构造系数矩阵低秩性、残差矩阵稀疏性与系数矩阵间的对齐约束
+     - 异常度量：样本在所有视图内低秩系数矩阵的成对内积（类异常）与残差矩阵内积（属性异常）之差
+     - 限制/优点：依赖成对计算；基于子空间（自表示）；处理两种异常值 (first ever)
+   - Keywords/ Contributions: 子空间学习；稀疏表示；低秩表示；凸优化
    - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/3168363), [[Code]](https://sheng-li.org/Codes/SDM15_MLRA_Code.zip)
 6. **LDSR**
    - From: "Latent Discriminant Subspace Representations for Multi-View Outlier Detection", AAAI 2018 (CCF-A)
-   - Description: 
-   - Keywords/ Contributions: 
+   - Description: MLRA的优化版
+     - 核心思想：将每个视图数据分解为低秩自表示项（包括共识表示和特定表示）与稀疏残差矩阵之和，并构造共识系数矩阵低秩性、特定系数矩阵和残差矩阵稀疏性的约束
+     - 异常度量：样本在所有视图内特定系数矩阵（类异常）和残差矩阵（属性异常）误差之和
+     - 限制/优点：不依赖成对计算 (first ever)；基于子空间（自表示）；处理三种异常值 (first ever)
+   - Keywords/ Contributions: 子空间学习；自表示学习；稀疏表示；低秩表示；凸优化
    - Link: [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/11826), [[Code]](https://github.com/kailigo/mvod)
 7. **MODDIS**
    - From: "Multi-view Outlier Detection in Deep Intact Space", ICDM 2019 (CCF-B)
-   - Description: 
-   - Keywords/ Contributions: 
+   - Description:
+     - 核心思想：建立多个view-specific自编码器与一个view-consensus自编码器，前者重构残差项最小化残差，后者重构共识项并最小化不同样本输入与输出的差异
+     - 异常度量：样本在所有视图内的合并latent嵌入的knn距离（类异常）和与平均嵌入之间的误差（属性异常）之和
+     - 限制/优点：深度方法 (first ever)；不依赖成对计算；基于邻域；处理三种异常值
+   - Keywords/ Contributions: 深度学习；knn；intact space learning；表示学习；自编码器
    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/8970937), [[Code]](https://github.com/sigerma/ICDM-2019-MODDIS)
 8. **MUVAD**
    - From: "Multi-View Anomaly Detection: Neighborhood in Locality Matters", AAAI 2019 (CCF-A)
    - Description: 
+     - 核心思想：
+     - 异常度量：
+     - 限制/优点：依赖成对计算；基于邻域；处理三种异常值
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/4418), [Code]
+   - Link: [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/4418), [Code] (Not-Found yet)
 9. **NCMOD**
    - From: "Neighborhood Consensus Networks for Unsupervised Multi-view Outlier Detection", AAAI 2021 (CCF-A)
    - Description: 
-   - Keywords/ Contributions: 
+     - 核心思想：使用自编码器重构样本；并在每个视图数据上建立图、构建knn邻接矩阵与共识项，施加对共识邻接矩阵的优化
+     - 异常度量：样本重构误差（属性异常）与latent embedding经共识邻接矩阵优化后的knn距离（类异常）之和
+     - 限制/优点：半深度方法；不依赖成对计算；基于邻域；处理三种异常值
+   - Keywords/ Contributions: 深度学习；knn ；intact space learning；表示学习；图表示；凸优化
    - Link: [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/16873), [[Code]](https://github.com/auguscl/NCMOD)
 10. **SRLSP**
     - From: "A Self-Representation Method with Local Similarity Preserving for Fast Multi-View Outlier Detection", TKDD 2023 (CCF-B, JCR Q1)
     - Description: 
+      - 核心思想：
+      - 异常度量：
+      - 限制/优点：
     - Keywords/ Contributions: 
     - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/3532191), [[Code]](https://github.com/wy54224/SRLSP)
 11. **IAMOD**
     - From: "Information-aware Multi-view Outlier Detection", TKDD 2024 (CCF-B, JCR Q1)
     - Description: 
-    - Keywords/ Contributions: 
+      - 核心思想：
+      - 异常度量：
+      - 限制/优点：
+    - Keywords/ Contributions: 深度学习；信息论
     - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/3638354), [[Code]](https://github.com/MaybeLL/IAMOD)
 12. **MODGD**
     - From: "Multi-view Outlier Detection via Graphs Denoising", Information Fusion 2024 (JCR Q1)
     - Description: 
+      - 核心思想：
+      - 异常度量：
+      - 限制/优点：
     - Keywords/ Contributions: 
     - Link: [[Paper]](https://www.sciencedirect.com/science/article/abs/pii/S1566253523003287), [[Code]]( http://Doctor-Nobody.github.io/codes/MODGD.zip)
 13. TODO...
@@ -118,7 +154,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - Description: 
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/6227694), [Code]
+   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/6227694), [Code] (Not-Found yet)
 
 2. PLVM
 
@@ -126,7 +162,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - Description: 
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://proceedings.neurips.cc/paper_files/paper/2016/hash/0f96613235062963ccde717b18f97592-Abstract.html), [Code]
+   - Link: [[Paper]](https://proceedings.neurips.cc/paper_files/paper/2016/hash/0f96613235062963ccde717b18f97592-Abstract.html), [Code] (Not-Found yet)
 
 3. MGAD
 
@@ -134,7 +170,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - Description: 
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/3269206.3271770), [Code]
+   - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/3269206.3271770), [Code] (Not-Found yet)
 
 4. IMVSAD
 
@@ -142,7 +178,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - Description: 
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-30678-5_9), [Code]
+   - Link: [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-30678-5_9), [Code] (Not-Found yet)
 
 5. Bayesian-MVAD
 
@@ -158,7 +194,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - Description: 
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9643362), [Code]
+   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9643362), [Code] (Not-Found yet)
 
 7. PLSVD (Unofficial name)
 
@@ -166,7 +202,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - Description: 
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/8944679/), [Code]
+   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/8944679/), [Code] (Not-Found yet)
 
 8. Deep ADAN (Unofficial name)
 
@@ -174,7 +210,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - Description: 
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9162509), [Code]
+   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9162509), [Code] (Not-Found yet)
 
 9. Fast ODDE (Unofficial name)
 
@@ -182,7 +218,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - Description: 
    - Keywords/ Contributions: 
-   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9122431), [Code]
+   - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9122431), [Code] (Not-Found yet)
 
 10. ECMOD
 
@@ -206,7 +242,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
     - Description: 
     - Keywords/ Contributions: 
-    - Link: [[Paper]](https://arxiv.org/abs/2409.09770), [Code]
+    - Link: [[Paper]](https://arxiv.org/abs/2409.09770), [Code] (Not-Found yet)
 
 13. Multi-view AD exploration
 
@@ -214,7 +250,7 @@ Any positive contribution to issues/pull requests is welcomed!
 
     - Description: 
     - Keywords/ Contributions: 
-    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9810850), [Code]
+    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9810850), [Code] (Not-Found yet)
 
 14. TODO...
 
