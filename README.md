@@ -45,7 +45,7 @@ Any positive contribution to issues/pull requests is welcomed!
 3. **DMOD**
    - From: "Dual-Regularized Multi-View Outlier Detection", IJCAI 2015 (CCF-A)
    - Description: 
-     - 核心思想：进行K-Means聚类后将数据分解为聚类中心矩阵、聚类指示矩阵和残差矩阵，并构造对每个视图残差矩阵稀疏性和聚类结构的成对约束
+     - 核心思想：进行K-Means聚类后将数据分解为聚类中心矩阵、聚类指示矩阵和残差矩阵的线性组合，并构造对每个视图残差矩阵稀疏性和聚类结构的成对约束
      - 异常度量：样本在所有视图内聚类指示矩阵的成对内积（类异常）与残差矩阵内积（属性异常）之差
      - 限制/优点：依赖成对计算；基于聚类；处理两种异常值
    - Keywords/ Contributions: K-Means聚类；稀疏表示；凸优化
@@ -53,7 +53,7 @@ Any positive contribution to issues/pull requests is welcomed!
 4. **CRMOD**
    - From: "Consensus Regularized Multi-View Outlier Detection", TIP 2018 (CCF-A, JCR Q1)
    - Description: DOMD的优化版
-     - 核心思想：进行K-Means聚类后将数据分解为共识聚类中心矩阵、聚类指示矩阵和残差矩阵，并构造对每个视图残差矩阵稀疏性和聚类结构的共识约束
+     - 核心思想：进行K-Means聚类后将数据分解为共识聚类中心矩阵、聚类指示矩阵和残差矩阵的线性组合，并构造对每个视图残差矩阵稀疏性和聚类结构的共识约束
      - 异常度量：同DMOD，仍为pair-wise
      - 限制/优点：依赖成对计算；基于聚类；处理两种异常值
    - Keywords/ Contributions: K-Means聚类；稀疏表示；凸优化
@@ -61,7 +61,7 @@ Any positive contribution to issues/pull requests is welcomed!
 5. **MLRA**
    - From: "Multi-View Low-Rank Analysis with Applications to Outlier Detection", TKDD 2018 (CCF-B, JCR Q1)
    - Description: SIAM 2015版本的优化
-     - 核心思想：将每个视图数据分解为低秩自表示项与稀疏残差矩阵之和，并构造系数矩阵低秩性、残差矩阵稀疏性与系数矩阵间的对齐约束
+     - 核心思想：将数据分解为低秩自表示项与稀疏残差项之和，并构造系数矩阵低秩性、残差矩阵稀疏性与系数矩阵间的对齐约束
      - 异常度量：样本在所有视图内低秩系数矩阵的成对内积（类异常）与残差矩阵内积（属性异常）之差
      - 限制/优点：依赖成对计算；基于子空间（自表示）；处理两种异常值 (first ever)
    - Keywords/ Contributions: 子空间学习；稀疏表示；低秩表示；凸优化
@@ -69,16 +69,16 @@ Any positive contribution to issues/pull requests is welcomed!
 6. **LDSR**
    - From: "Latent Discriminant Subspace Representations for Multi-View Outlier Detection", AAAI 2018 (CCF-A)
    - Description: MLRA的优化版
-     - 核心思想：将每个视图数据分解为低秩自表示项（包括共识表示和特定表示）与稀疏残差矩阵之和，并构造共识系数矩阵低秩性、特定系数矩阵和残差矩阵稀疏性的约束
-     - 异常度量：样本在所有视图内特定系数矩阵（类异常）和残差矩阵（属性异常）误差之和
+     - 核心思想：将数据分解为低秩自表示项（包括共识表示和特定表示）与稀疏残差项之和，并构造共识系数矩阵低秩性、特定系数矩阵和残差矩阵稀疏性的约束
+     - 异常度量：样本在所有视图内特定系数矩阵（类异常）和残差矩阵（属性异常）$\mathcal{l}_2$-norm之和
      - 限制/优点：不依赖成对计算 (first ever)；基于子空间（自表示）；处理三种异常值 (first ever)
    - Keywords/ Contributions: 子空间学习；自表示学习；稀疏表示；低秩表示；凸优化
    - Link: [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/11826), [[Code]](https://github.com/kailigo/mvod)
 7. **MODDIS**
    - From: "Multi-view Outlier Detection in Deep Intact Space", ICDM 2019 (CCF-B)
    - Description:
-     - 核心思想：建立多个view-specific自编码器与一个view-consensus自编码器，前者重构残差项最小化残差，后者重构共识项并最小化不同样本输入与输出的差异
-     - 异常度量：样本在所有视图内的合并latent嵌入的knn距离（类异常）和与平均嵌入之间的误差（属性异常）之和
+     - 核心思想：建立两类编码器执行重构：多个view-specific Enc与一个view-consensus Enc。前者重构残差项最小化残差，后者重构共识项并最小化输入与输入表示空间的密度差异
+     - 异常度量：样本在所有视图内的合并latent嵌入的knn距离（类异常）和与平均嵌入之间的差（属性异常）之和
      - 限制/优点：深度方法 (first ever)；不依赖成对计算；基于邻域；处理三种异常值
    - Keywords/ Contributions: 深度学习；knn；intact space learning；表示学习；自编码器
    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/8970937), [[Code]](https://github.com/sigerma/ICDM-2019-MODDIS)
@@ -93,34 +93,34 @@ Any positive contribution to issues/pull requests is welcomed!
 9. **NCMOD**
    - From: "Neighborhood Consensus Networks for Unsupervised Multi-view Outlier Detection", AAAI 2021 (CCF-A)
    - Description: 
-     - 核心思想：使用自编码器重构样本；并在每个视图数据上建立图、构建knn邻接矩阵与共识项，施加对共识邻接矩阵的优化
-     - 异常度量：样本重构误差（属性异常）与latent embedding经共识邻接矩阵优化后的knn距离（类异常）之和
-     - 限制/优点：半深度方法；不依赖成对计算；基于邻域；处理三种异常值
-   - Keywords/ Contributions: 深度学习；knn ；intact space learning；表示学习；图表示；凸优化
+     - 核心思想：使用自编码器重构样本，同时为每个视图的图knn邻接矩阵构建共识项，并施加最小距离优化
+     - 异常度量：样本重构误差（属性异常）与latent embedding的共识knn距离（类异常）之和
+     - 限制/优点：深度方法；不依赖成对计算；基于邻域；处理三种异常值
+   - Keywords/ Contributions: 深度学习；knn ；intact space learning；表示学习；自编码器；图表示
    - Link: [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/16873), [[Code]](https://github.com/auguscl/NCMOD)
 10. **SRLSP**
     - From: "A Self-Representation Method with Local Similarity Preserving for Fast Multi-View Outlier Detection", TKDD 2023 (CCF-B, JCR Q1)
     - Description: 
-      - 核心思想：
-      - 异常度量：
-      - 限制/优点：
-    - Keywords/ Contributions: 
+      - 核心思想：提出了两个创新模块：邻域自表示与融合自适应相似度学习模块。前者使用邻域的线性组合表示样本点并约束残差项与系数，后者构建跨视图共识系数矩阵并施加最小距离优化 (similar to NCMOD)
+      - 异常度量：邻域表示残差项（属性异常）与各视图系数矩阵同共识矩阵的差（类异常）之和
+      - 限制/优点：不依赖成对计算；基于子空间（邻域）；处理三种异常值
+    - Keywords/ Contributions: knn；子空间学习；自适应相似度学习；凸优化；图表示
     - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/3532191), [[Code]](https://github.com/wy54224/SRLSP)
 11. **IAMOD**
     - From: "Information-aware Multi-view Outlier Detection", TKDD 2024 (CCF-B, JCR Q1)
     - Description: 
-      - 核心思想：
-      - 异常度量：
-      - 限制/优点：
-    - Keywords/ Contributions: 深度学习；信息论
+      - 核心思想：基于信息论思想构建两组神经网络：一组编码器压缩数据，并基于对比学习最大化同一样本点不同视图间相似度并最小化不同样本相似度；一组预测器（AE架构）执行跨视图重构（预测）并最小化预测误差。
+      - 异常度量：latent embedding的knn距离（属性异常）与跨视图预测误差（类异常）之和
+      - 限制/优点：深度方法；依赖成对计算；基于邻域；处理三种异常值
+    - Keywords/ Contributions: 深度学习；knn；信息论；对比学习；intact space learning；表示学习
     - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/3638354), [[Code]](https://github.com/MaybeLL/IAMOD)
 12. **MODGD**
     - From: "Multi-view Outlier Detection via Graphs Denoising", Information Fusion 2024 (JCR Q1)
     - Description: 
-      - 核心思想：
-      - 异常度量：
-      - 限制/优点：
-    - Keywords/ Contributions: 
+      - 核心思想：在每个视图上构建图与邻接矩阵；随后将矩阵分解为共识低秩项与稀疏残差项，并引入权重矩阵和低秩约束以减少属性异常对类异常检测的影响并优化共识图结果
+      - 异常度量：邻接矩阵的knn距离（属性异常）与分解后的残差$\mathcal{l}_2$-norm（类异常）之和
+      - 限制/优点：基于子空间与邻域；处理三种异常值
+    - Keywords/ Contributions: knn；子空间学习；矩阵分解；低秩表示；稀疏表示；凸优化；图表示
     - Link: [[Paper]](https://www.sciencedirect.com/science/article/abs/pii/S1566253523003287), [[Code]]( http://Doctor-Nobody.github.io/codes/MODGD.zip)
 13. TODO...
 
