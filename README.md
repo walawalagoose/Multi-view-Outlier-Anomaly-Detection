@@ -77,7 +77,7 @@ Any positive contribution to issues/pull requests is welcomed!
 7. **MODDIS**
    - From: "Multi-view Outlier Detection in Deep Intact Space", ICDM 2019 (CCF-B)
    - Description:
-     - 核心思想：建立两类编码器执行重构：多个view-specific Enc与一个view-consensus Enc。前者重构残差项最小化残差，后者重构共识项并最小化输入与输入表示空间的密度差异
+     - 核心思想：建立两类编码器执行重构：多个view-specific Enc与一个view-consensus Enc。前者重构残差项并最小化残差，后者重构共识项并最小化输入与输入表示空间的密度差异
      - 异常度量：样本在所有视图内的合并latent嵌入的knn距离（类异常）和与平均嵌入之间的差（属性异常）之和
      - 限制/优点：深度方法 (first ever)；不依赖成对计算；基于邻域；处理三种异常值
    - Keywords/ Contributions: 深度学习；knn；intact space learning；表示学习；自编码器
@@ -85,10 +85,10 @@ Any positive contribution to issues/pull requests is welcomed!
 8. **MUVAD**
    - From: "Multi-View Anomaly Detection: Neighborhood in Locality Matters", AAAI 2019 (CCF-A)
    - Description: 
-     - 核心思想：
-     - 异常度量：
-     - 限制/优点：依赖成对计算；基于邻域；处理三种异常值
-   - Keywords/ Contributions: 
+     - 核心思想：在每个视图上构建图邻接矩阵，并以近似正常样本和邻接样本集为目标进行优化
+     - 异常度量：样本在所有视图内邻接矩阵的knn正常邻域相似度的和
+     - 限制/优点：不依赖成对计算；基于邻域；处理三种异常值
+   - Keywords/ Contributions: knn；凸优化；图表示
    - Link: [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/4418), [Code] (Not-Found yet)
 9. **NCMOD**
    - From: "Neighborhood Consensus Networks for Unsupervised Multi-view Outlier Detection", AAAI 2021 (CCF-A)
@@ -132,12 +132,14 @@ Any positive contribution to issues/pull requests is welcomed!
 
    - From: "Partial Multi-View Outlier Detection Based on Collective Learning", AAAI 2018 (CCF-A)
    - Description: 
+
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://ojs.aaai.org/index.php/AAAI/article/view/11278), [[Code]](https://github.com/eeGuoJun/AAAI2018_CL)
 
 2. **RCPMOD**
 
    - From: "Regularized Contrastive Partial Multi-view Outlier Detection", ACMMM 2024 (CCF-A)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://arxiv.org/abs/2408.07819), [[Code]](https://github.com/180400518/RCPMOD)
@@ -149,6 +151,7 @@ Any positive contribution to issues/pull requests is welcomed!
 1. CC
 
    - From: "Using Consensus Clustering for Multi-view Anomaly Detection", S&P Workshops 2012 (CCF-A of main conference)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/6227694), [Code] (Not-Found yet)
@@ -156,6 +159,7 @@ Any positive contribution to issues/pull requests is welcomed!
 2. PLVM
 
    - From: "Multi-view Anomaly Detection via Robust Probabilistic Latent Variable Models", NeurIPS 2016 (CCF-A)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://proceedings.neurips.cc/paper_files/paper/2016/hash/0f96613235062963ccde717b18f97592-Abstract.html), [Code] (Not-Found yet)
@@ -163,6 +167,7 @@ Any positive contribution to issues/pull requests is welcomed!
 3. MGAD
 
    - From: "Multi-View Group Anomaly Detection", CIKM 2018 (CCF-B)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://dl.acm.org/doi/abs/10.1145/3269206.3271770), [Code] (Not-Found yet)
@@ -170,6 +175,7 @@ Any positive contribution to issues/pull requests is welcomed!
 4. IMVSAD
 
    - From: "Inductive Multi-view Semi-Supervised Anomaly Detection via Probabilistic Modeling", ICBK 2019
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-30678-5_9), [Code] (Not-Found yet)
@@ -177,6 +183,7 @@ Any positive contribution to issues/pull requests is welcomed!
 5. Bayesian-MVAD
 
    - From: "Towards a Hierarchical Bayesian Model of Multi-View Anomaly Detection", IJCAI 2020 (CCF-A)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://par.nsf.gov/servlets/purl/10171437), [[Code]](https://github.com/zwang-datascience/MVAD_Bayesian/)
@@ -184,6 +191,7 @@ Any positive contribution to issues/pull requests is welcomed!
 6. CGAEs
 
    - From: "Cross-aligned and Gumbel-refactored Autoencoders for Multi-view Anomaly Detection", ICTAI 2021 (CCF-C)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9643362), [Code] (Not-Found yet)
@@ -191,6 +199,7 @@ Any positive contribution to issues/pull requests is welcomed!
 7. PLSVD (Unofficial name)
 
    - From: "Learning Probabilistic Latent Structure for Outlier Detection from Multi-view Data", PAKDD 2021 (CCF-C)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/8944679/), [Code] (Not-Found yet)
@@ -198,6 +207,7 @@ Any positive contribution to issues/pull requests is welcomed!
 8. Deep ADAN (Unofficial name)
 
    - From: "A Deep Multi-View Framework for Anomaly Detection on Attributed Networks", TKDE 2022 (CCF-A, JCR Q1)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9162509), [Code] (Not-Found yet)
@@ -205,6 +215,7 @@ Any positive contribution to issues/pull requests is welcomed!
 9. Fast ODDE (Unofficial name)
 
    - From: "Fast Multi-View Outlier Detection via Deep Encoder", TBD 2022 (CCF-C, JCR Q1)
+
    - Description: 
    - Keywords/ Contributions: 
    - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9122431), [Code] (Not-Found yet)
@@ -212,6 +223,7 @@ Any positive contribution to issues/pull requests is welcomed!
 10. ECMOD
 
     - From: "Learning Enhanced Representations via Contrasting for Multi-view Outlier Detection", DASFAA 2023 (CCF-B)
+
     - Description: 
     - Keywords/ Contributions: 
     - Link: [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-30678-5_9), [[Code]](https://github.com/scu-kdde/OAM-ECMOD-2023)
@@ -219,6 +231,7 @@ Any positive contribution to issues/pull requests is welcomed!
 11. SeeM
 
     - From: "SeeM: A Shared Latent Variable Model for Unsupervised Multi-view Anomaly Detection", PAKDD 2024  (CCF-C)
+
     - Description: 
     - Keywords/ Contributions: 
     - Link: [[Paper]](https://link.springer.com/chapter/10.1007/978-981-97-2242-6_7), [[Code]](https://github.com/thanhphuong163/SeeM)
@@ -226,6 +239,7 @@ Any positive contribution to issues/pull requests is welcomed!
 12. MGAD-SGCC (Unofficial name)
 
     - From: "Towards Multi-view Graph Anomaly Detection with Similarity-Guided Contrastive Clustering", *arxiv* 2024
+
     - Description: 
     - Keywords/ Contributions: 
     - Link: [[Paper]](https://arxiv.org/abs/2409.09770), [Code] (Not-Found yet)
@@ -233,6 +247,7 @@ Any positive contribution to issues/pull requests is welcomed!
 13. Multi-view AD exploration
 
     - From: "Multiview Deep Anomaly Detection: A Systematic Exploration", TNNLS 2024 (CCF-B, JCR Q1)
+
     - Description: 
     - Keywords/ Contributions: 
     - Link: [[Paper]](https://ieeexplore.ieee.org/abstract/document/9810850), [Code] (Not-Found yet)
